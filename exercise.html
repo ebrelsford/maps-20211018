@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Mapping with Carto</title>
+        <link href='//fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Mapping with Carto</h1>
+            </header>
+
+            <section>
+                <h2>Part One</h2>
+
+                <ol>
+                    <li>Open <a href="https://data.cityofnewyork.us">data.cityofnewyork.us</a></li>
+                    <li>Search for <strong>motor vehicle collisions</strong>.</li>
+                    <li>Click <strong>View Data</strong> to preview the data. Don't download the entire file right now since it is very large&mdash;we're just looking at this as an example.</li>
+                    <li>Search again, this time for <strong>borough boundaries</strong>.</li>
+                    <li>Preview the borough boundaries and download them (click <strong>Export</strong>, then the <strong>Shapefile</strong> link).</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part Two</h2>
+
+                <h3>Create a Carto account</h3>
+                <p>First, let's create an account with Carto. The New School has an agreement with Carto that can get you extra space if you need it&mdash;I recommend using it!</p>
+                <ol>
+                    <li>Go to the <a href="https://thenewschool.carto.com/signup">New School Carto sign up page</a>.</li>
+                    <li>Create a new account.</li>
+                </ol>
+
+                <h3>Make a map</h3>
+                <ol>
+                    <li>Open your Carto account.</li>
+                    <li>Click <strong>New Dataset</strong> and drag-and-drop the boroughs zipfile onto the page, then click <strong>Connect Dataset</strong>.</li>
+                    <li>Carto will show you a preview of the borough data. At the bottom right click <strong>Create Map</strong>.</li>
+                </ol>
+
+                <h3>Download some more data</h3>
+                <p>Let's add more data to the map using Inside Airbnb:</p>
+                <ol>
+                    <li>In a new tab, go to <a href="http://insideairbnb.com/">insideairbnb.com</a>.</li>
+                    <li>Click <strong>Get the Data</strong>.</li>
+                    <li>Scroll to New York City.</li>
+                    <li>Right-click the <strong>listings.csv</strong> link and download the file (<strong>Save link as</strong>).</li>
+                    <li>Back in Carto, click the <strong>Add</strong> button. Go to the <strong>Connect Dataset</strong> tab to create another dataset, this time uploading the listings from Inside Airbnb.</li>
+                    <li>Click <strong>Add layer</strong> and your map should have both of your layers.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part Three</h2>
+
+                <h3>Open mapping session</h3>
+                <ol>
+                    <li>Use your own data or some of the following data sources to make a map with Carto:</li>
+                    <ul>
+                        <li><a href="https://data.cityofnewyork.us/">NYC Open Data</a>, I recommend starting with <a href="https://data.cityofnewyork.us/browse?limitTo=maps">the datasets, filtered to map files</a>, but consider looking at others too</li>
+                        <li><a href="http://www1.nyc.gov/site/planning/data-maps/open-data.page">NYC Department of City Planning Open Data</a></li>
+                        <li><a href="https://www.data.gov/">US Government's open data portal</a></li>
+                        <li><a href="http://data.worldbank.org/">World Bank's data bank</a></li>
+                    </ul>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">This workshop</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
