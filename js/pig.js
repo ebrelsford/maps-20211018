@@ -6,23 +6,66 @@ window.addEventListener('load', function() {
         style.innerHTML = '.slide {display:block;' +
             'height:' + window.innerHeight + 'px;}';
     }
-    w.addEventListener('resize', set);
+
+    function next() {
+        go(++cur);
+    }
+    function prev() {
+        go(Math.max(0, --cur));
+    }
+
+    function inGridMode() {
+        return d.body.classList.contains('grid-mode');
+    }
+
+    function toggleGridMode() {
+        d.body.classList.toggle('grid-mode');
+        if (!inGridMode()) {
+            go(cur);
+        }
+        else {
+            d.querySelectorAll('.slide').item(cur).scrollIntoView();
+        }
+    }
+
+    d.querySelectorAll('.slide').forEach(function (slide, index) {
+        slide.addEventListener('click', function (e) {
+            if (inGridMode()) {
+                d.body.classList.toggle('grid-mode');
+                cur = index;
+                go(cur);
+            }
+        });
+    });
+
+    w.addEventListener('resize', function () {
+        set();
+        go(cur);
+    });
     w.addEventListener('scroll', function update(e) {
+        if (inGridMode()) return;
         cur = Math.floor(w.scrollY / w.innerHeight);
         if (w.location.hash !== cur) w.location.hash = cur;
         e.preventDefault();
     });
     w.addEventListener('DOMMouseScroll', function(e) {
+        if (inGridMode()) return;
         e.preventDefault();
     });
     d.addEventListener('keydown', function(e) {
         if (e.which === 39 || e.which === 34) {
-            go(Math.min(++cur));
+            if (inGridMode()) return;
+            next();
             e.preventDefault();
         }
         if (e.which === 37 || e.which === 33) {
-            go(Math.max(0, --cur));
+            if (inGridMode()) return;
+            prev();
             e.preventDefault();
+        }
+        if (e.key === 'g') {
+            console.log('toggle');
+            toggleGridMode();
         }
     });
     function hash() {
@@ -32,4 +75,27 @@ window.addEventListener('load', function() {
     window.onhashchange = function() { if (hash() !== cur) go(hash()); };
     set();
     go(cur);
+
+    if (Hammer) {
+        delete Hammer.defaults.cssProps.userSelect;
+        var hammertime = new Hammer(document.body, { inputClass: Hammer.TouchInput });
+        hammertime.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL });
+
+        hammertime.on('pandown panup', function (e) {
+            if (e && e.gesture) e.gesture.preventDefault();
+        });
+
+        hammertime.on('swiperight', function (e) {
+            if (e && e.gesture) {
+                prev();
+                e.gesture.preventDefault();
+            }
+        });
+        hammertime.on('swipeleft', function (e) {
+            if (e && e.gesture) {
+                next();
+                e.gesture.preventDefault();
+            }
+        });
+    }
 });

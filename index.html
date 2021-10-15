@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>maps</title>
+        <title>talking about maps</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
@@ -10,12 +10,12 @@
         <link href="css/pig.css" rel="stylesheet" type="text/css" />
         <link href="css/base.css" rel="stylesheet" />
 
+        <script src="js/hammer.min.js"></script>
         <script src="js/pig.js"></script>
     </head>
     <body>
 
         <div class="slide">
-            <h2>bit.ly/june8-carto-slides</h2>
         </div>
 
         <div class="slide">
@@ -33,8 +33,10 @@
             <a href="http://urbanreviewer.org" class="source">source</a>
         </div>
 
-        <div class="slide" style="background-image: url(img/cyl.png);">
-            <a href="http://map.curbyourlitter.org" class="source">source</a>
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <a class="source" href="https://livinglotsnyc.org/#13/40.6866/-73.9366">
+                Living Lots NYC
+            </a>
         </div>
 
         <div class="slide">
@@ -51,12 +53,10 @@
             </a>
         </div>
 
-        <div class="slide" style="background-image: url(img/clinton-would-have-won.png);">
-            <a class="source" href="https://medium.com/@khayeswilson/clinton-would-have-won-if-the-united-states-looked-like-this-7b9c844b76a9#.j0xwmcfdp">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/redraw-the-states.png);">
-            <a class="source" href="http://kevinhayeswilson.com/redraw/">source</a>
+        <div class="slide" style="background-image: url(img/health-atlas.png);">
+            <a class="source" href="https://healthatlas.ucsf.edu/?active=covid_fully_vaccinated_percap&active=pct_eli_all&geography=counties&covid=2021-10-12&zoom=5.269460674993227&lng=-119.5&lat=37.3262221021474">
+                UCSF Health Atlas
+            </a>
         </div>
 
         <div class="slide">
@@ -110,8 +110,7 @@
 
         <div class="slide">
             <h2>let's look at some data!</h2>
-            <a href="exercise.html">bit.ly/june8-carto-exercises</a>
-            (part one)
+            <a href="exercise.html">part one</a>
         </div>
 
         <div class="slide">
@@ -153,6 +152,60 @@
         <div class="slide" style="background-image: url(img/isee.png);">
             <a class="source" href="http://66.93.183.118:8080/isee/s1?zm=0&id=11885">iSee</a>
         </div>
+
+        <div class="slide">
+            <h2>map kibera</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera_compare.png);">
+            <a class="source" href="http://tools.geofabrik.de/mc/#17/-1.3126/36.7968&num=2&mt0=mapnik-humanitarian&mt1=google-map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera_compare_zoom.png);">
+            <a class="source" href="http://tools.geofabrik.de/mc/#17/-1.3126/36.7968&num=2&mt0=mapnik-humanitarian&mt1=google-map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/groundtruth.png);">
+            <a class="source" href="http://groundtruth.in/">Groundtruth Initiative</a>
+        </div>
+
+        <div class="slide">
+            <h2>1. trace the roads using aerial imagery</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera-outline.jpg);">
+            <a class="source" href="http://www.mapkibera.org/blog/2010/01/12/some-notes-on-map-kibera-mapping/">Map Kibera Blog</a>
+        </div>
+
+        <div class="slide">
+            <h2>2. use GPS to collect point data and correct roads</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera-gps.jpg);">
+            <a class="source" href="http://www.mapkibera.org/blog/2011/08/16/help-map-kibera-turn-maps-into-action/">Map Kibera Blog</a>
+        </div>
+
+        <div class="slide">
+            <p>"In the intense density of Kibera, selecting which features are 'important' is a judgment call and a matter of interest."</p>
+            <a class="source" href="http://www.mapkibera.org/blog/2010/01/12/some-notes-on-map-kibera-mapping/">Map Kibera Blog</a>
+        </div>
+
+        <div class="slide">
+            <h2>3. decide on and focus on themes</h2>
+            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Education">education</a></p>
+            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Health">health</a></p>
+            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Security">security</a></p>
+            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Watsan">water and sanitation</a></p>
+        </div>
+
+        <div class="slide">
+            <h2>4. map those themes</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/map-kibera-wall.jpg);">
+            <a class="source" href="http://www.mapkibera.org/blog/2013/04/10/security-map-draws-attention-in-kibera/">Map Kibera Blog</a>
+        </div>
+
 
         <div class="slide">
             <h2>sometimes you can transcribe data from non-map sources</h2>
@@ -197,6 +250,46 @@
         <div class="slide" style="background-image: url(img/carto.png);">
         </div>
 
+        <div class="slide" style="background-image: url(img/social-explorer.png);">
+            <a class="source" href="https://www.socialexplorer.com/" target="_blank">socialexplorer.com</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/unfolded.png);">
+            <a class="source" href="https://www.unfolded.ai" target="_blank">unfolded.ai</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/umap.png);">
+            <a class="source" href="https://umap.openstreetmap.fr" target="_blank">umap.openstreetmap.fr</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fieldpapers.png);">
+            <a class="source" href="http://fieldpapers.org">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fieldpapers-make-atlas.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fieldpapers-print-atlas.png);">
+            <a class="source" href="http://fieldpapers.org/atlas.php?id=fhnp4qks#18/40.73649/-73.99715">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fieldpapers-page.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/walkingpapers-osm.jpg);">
+            <a class="source" href="http://wiki.openstreetmap.org/wiki/Walking_Papers">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fieldpapers-uploaded.png);">
+            <a class="source" href="http://fieldpapers.org/atlas.php?id=ncz5lrfs#17/40.67782/-73.96397">
+                source
+            </a>
+        </div>
+
         <div class="slide">
             <h2>why put maps online?</h2>
         </div>
@@ -225,6 +318,10 @@
             </ul>
         </div>
 
+        <div class="slide">
+            <h2>TODO maybe unfolded instead? social explorer?</h2>
+        </div>
+
         <div class="slide" style="background-image: url(img/carto-datasets.png);">
         </div>
 
@@ -247,8 +344,7 @@
 
         <div class="slide">
             <h2>let's make a map together</h2>
-            <a href="exercise.html">bit.ly/june8-carto-exercises</a>
-            (part two)
+            <a href="exercise.html">part two</a>
         </div>
 
         <div class="slide">
@@ -447,8 +543,7 @@
 
         <div class="slide">
             <h2>now make your own map</h2>
-            <a href="exercise.html">bit.ly/june8-carto-exercises</a>
-            (part three)
+            <a href="exercise.html">part three</a>
         </div>
 
         <div class="slide">

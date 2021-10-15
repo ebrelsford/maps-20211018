@@ -85,7 +85,7 @@ p {
  * Pig overrides
  */
 div.slide {
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -185,8 +185,17 @@ pre {
     line-height: 60px;
 }
 
+pre.prettyprint {
+    border: none;
+}
+
 code {
     font-family: Courier, mono;
+}
+
+code.wrapped {
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 .highlighted {
